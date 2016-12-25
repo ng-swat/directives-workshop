@@ -5,7 +5,8 @@ import {Component} from '@angular/core';
   template: `  
     <div class="container">
       <swat-nav [items]="menuItems"></swat-nav>
-    </div>
+      <swat-nav-inline [items]="menuItems"></swat-nav-inline>
+    </div>  
   `,
 })
 export class AppComponent {
