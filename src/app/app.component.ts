@@ -6,15 +6,12 @@ import {TabComponent} from "./tab/tab.component";
   selector: 'swat-root',
   template: `  
     <div class="container">
-      
-      <input type="text">
-      
+     <button swatAutoDisable class="btn btn-lg btn-primary">click</button>        
     </div>  
   `,
 })
 export class AppComponent {
-    value = "nir"
-
+  value = 0;
 }
 
 

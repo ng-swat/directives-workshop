@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { NavInlineComponent } from './nav-inline/nav-inline.component';
 import { TabComponent } from './tab/tab.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { CounterComponent } from './counter/counter.component';
+import { AutoDisableDirective } from './auto-disable.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { TabsComponent } from './tabs/tabs.component';
     NavComponent,
     NavInlineComponent,
     TabComponent,
-    TabsComponent
+    TabsComponent,
+    CounterComponent,
+    AutoDisableDirective
   ],
   imports: [
     BrowserModule,
