@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'swat-root',
-  template: `
-  <h1>
-    {{title}}
-  </h1>
+  template: `  
+    <div class="container">
+      <swat-nav [items]="menuItems"></swat-nav>
+    </div>
   `,
-  styles: []
 })
 export class AppComponent {
-  title = 'swat works!';
+
+  menuItems = [
+    {label: 'one', active: true },
+    {label: 'two', active: false },
+    {label: 'tree', active: false }
+  ]
+
 }
