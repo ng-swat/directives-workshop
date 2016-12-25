@@ -1,20 +1,27 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild, AfterViewInit, ViewChildren} from '@angular/core';
+import {TabsComponent} from "./tabs/tabs.component";
+import {TabComponent} from "./tab/tab.component";
 
 @Component({
   selector: 'swat-root',
   template: `  
     <div class="container">
-      <swat-nav [items]="menuItems"></swat-nav>
-      <swat-nav-inline [items]="menuItems"></swat-nav-inline>
+      
+      <input type="text">
+      
     </div>  
   `,
 })
 export class AppComponent {
-
-  menuItems = [
-    {label: 'one', active: true },
-    {label: 'two', active: false },
-    {label: 'tree', active: false }
-  ]
+    value = "nir"
 
 }
+
+
+
+
+
+
+
+
+
