@@ -1,17 +1,28 @@
-import {Component, ViewChild, AfterViewInit, ViewChildren} from '@angular/core';
-import {TabsComponent} from "./tabs/tabs.component";
-import {TabComponent} from "./tab/tab.component";
+import {Component, ViewChild, ViewContainerRef, ComponentFactoryResolver} from "@angular/core";
+import {CardComponent} from "./card/card.component";
 
 @Component({
   selector: 'swat-root',
   template: `  
     <div class="container">
-     <button swatAutoDisable class="btn btn-lg btn-primary">click</button>        
+       <button (click)="createInstance()">crate</button>                                                                                                                                                        
+       <div #container></div>      
     </div>  
   `,
 })
 export class AppComponent {
-  value = 0;
+  @ViewChild('container', {read: ViewContainerRef}) container;
+  private resolver: ComponentFactoryResolver;
+
+  constructor(resolver:ComponentFactoryResolver) {
+    this.resolver = resolver;
+  }
+
+  createInstance(){
+    const cardFactory = this.resolver.resolveComponentFactory(CardComponent);
+    const card = this.container.createComponent(cardFactory);
+    card.instance.title = "Nir";
+  }
 }
 
 

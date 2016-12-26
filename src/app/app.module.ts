@@ -11,18 +11,27 @@ import { TabComponent } from './tab/tab.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { CounterComponent } from './counter/counter.component';
 import { AutoDisableDirective } from './auto-disable.directive';
+import { IfDirective } from './if.directive';
+import { ForDirective } from './for.directive';
+import { FocusDirective } from './focus.directive';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReuseComponent,
-    NavComponent,
     NavInlineComponent,
+    NavComponent,
     TabComponent,
     TabsComponent,
     CounterComponent,
-    AutoDisableDirective
+    AutoDisableDirective,
+    IfDirective,
+    ForDirective,
+    FocusDirective,
+    CardComponent
   ],
+  entryComponents: [CardComponent],
   imports: [
     BrowserModule,
     FormsModule,
